@@ -3,6 +3,7 @@ layout: default
 title: Marla and Matt are getting married! Yay!
 photo: /images/vineapple.jpg
 active: photos
+
 carousel:
 - src: brooklynbridgepark.jpg
   caption: This is the caption
@@ -42,33 +43,20 @@ carousel:
   caption: This is the caption
 ---
 
-
 <div class="row">
     <div class="col-md-12">
-                <p class="lead">Photos of Matt & Marla</p>
-
+        <p class="lead">Photos of Matt & Marla</p>
     </div>
 
-
     <!-- main slider carousel -->
-
-
     <div class="col-md-12" id="carousel-bounding-box">
-
-
         <div id="mm-photo-carousel" class="carousel slide">
             <!-- main slider carousel items -->
             <div class="carousel-inner">
                 {% for item in page.carousel %}
-                <div class="{% if forloop.index0 == 0 %}active{% endif %} item"
-                     data-slide-number="{{ forloop.index0 }}"
-                        style="background-image: url({{ site.baseurl }}/images/photos/{{ item.src }})">
-
-                </div>
+                <div class="{% if forloop.index0 == 0 %}active{% endif %} item" data-slide-number="{{ forloop.index0 }}" style="background-image: url({{ site.baseurl }}/images/photos/{{ item.src }})"></div>
                 {% endfor %}
             </div>
-
-
         </div>
     </div>
 
@@ -76,19 +64,11 @@ carousel:
     <!--/main slider carousel-->
 
     <div class="col-md-12">
-
         <!-- thumb navigation carousel items -->
         <div class="mm-carousel-thumbs">
             {% for item in page.carousel %}
-            <div class="carousel-selector {% if forloop.index0 == 0 %}selected{% endif %}"
-                 style="background-image:url({{ site.baseurl }}/images/photos/{{ item.src }})"
-                data-id="{{ forloop.index0 }}">
-
-            </div>
+            <div class="carousel-selector {% if forloop.index0 == 0 %}selected{% endif %}" style="background-image:url({{ site.baseurl }}/images/photos/{{ item.src }})" data-id="{{ forloop.index0 }}"></div>
             {% endfor %}
         </div>
     </div>
-
 </div>
-
-
