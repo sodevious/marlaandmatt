@@ -1,7 +1,7 @@
 $(function() {
-  $('.mm-nav').affix({
+  $('.mm-affixed').affix({
     offset: {
-      top: 600
+      top: 610
     }
   })
 });

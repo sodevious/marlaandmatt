@@ -14,75 +14,67 @@
     <script src="{{ site.baseurl }}/javascripts/bootstrap/affix.js"></script>
     <script src="{{ site.baseurl }}/javascripts/main.js"></script>
     <script src="{{ site.baseurl }}/javascripts/carousel.js"></script>
-    <!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,600,700|Life+Savers:400' rel='stylesheet' type='text/css'>" -->
    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700|Pacifico|Raleway:200,500,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <div class="mm-top mm-top-{{ page.active }}" style="background-image:url({{ site.baseurl }}{{ page.photo }})">
     {% if page.active == "couple" %}
- <img class="mm-headline" src="{{ site.baseurl }}/images/marlaandmatt2.png" width="400" height="102" />
+    <img class="mm-headline no-shadow" src="{{ site.baseurl }}/images/marlaandmatt3.png" width="400" height="102" />
     {% endif %}
 </div>
 
+<nav class="mm-affixed navbar navbar-default" role="navigation">
+  <div class="container">
+        <ul class="mm-nav">
+            <li>
+                <a {% if page.active == "couple" %}class="active" {% endif %}href="{{ site.baseurl }}/"><span>The</span> Couple</a>
+            </li>
+            <li>
+                <a {% if page.active == "photos" %}class="active" {% endif %}href="{{ site.baseurl }}/photos/">Photos</a>
+            </li>
+            <li>
+                <a {% if page.active == "wedding-party" %}class="active" {% endif %}href="{{ site.baseurl }}/wedding-party/"><span>the</span> Wedding Party</a>
+            </li>
+            <li>
+                <a {% if page.active == "ceremony" %}class="active" {% endif %}href="{{ site.baseurl }}/ceremony/"><span>the</span> Big Day</a>
+            </li>
+            <li>
+                <a {% if page.active == "registry" %}class="active" {% endif %}href="{{ site.baseurl }}/registry/">Registry</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
     <div class="col-md-4">
-    <ul class="mm-nav list-unstyled">
-        <li>
-        <a {% if page.active == "couple" %}class="active" {% endif %}href="{{ site.baseurl }}/"><span>The</span> Couple</a>
-        </li>
-        <li>
-        <a {% if page.active == "photos" %}class="active" {% endif %}href="{{ site.baseurl }}/photos/">Photos</a>
-        </li>
-        <li>
-        <a {% if page.active == "wedding-party" %}class="active" {% endif %}href="{{ site.baseurl }}/wedding-party/"><span>the</span> Wedding Party</a>
-        </li>
-        <li>
-        <a {% if page.active == "ceremony" %}class="active" {% endif %}href="{{ site.baseurl }}/ceremony/"><span>the</span> Big Day</a>
-        </li>
-        <li>
-        <a {% if page.active == "registry" %}class="active" {% endif %}href="{{ site.baseurl }}/registry/">Registry</a>
-        </li>
-        <li>
-            <div class="mm-nav-directions">
-         October 11, 2014<br />
-         4:00 PM<br />
-         The Inn at Millrace Pond<br />
-         Hope, NJ<br />
-
-          <a href="{{ site.baseurl }}/ceremony/">Travel & Accommodations</a></p>
-     </div>
-        </li>
-    </ul>
-
-
-
-
+        <ul class="list-unstyled">
+            <li>
+                <div class="mm-nav-directions">
+                    October 11, 2014<br />
+                    4:00 PM<br />
+                    The Inn at Millrace Pond<br />
+                    Hope, NJ<br />
+                    <a href="{{ site.baseurl }}/ceremony/">Travel & Accommodations</a>
+                </div>
+            </li>
+        </ul>
     </div>
     <div class="content col-md-8">
         {{ content }}
-
-
     </div>
 </div>
 
-
 <div class="mm-footer">
-
-
-    <img class="mm-logo" src="{{ site.baseurl }}/images/mandmthing-white.png" />
-
-
-          <div class="mm-credits">
-        <h4>Engagement Photos by <a href="http://brooklynhilary.wordpress.com/">Hilary McHone</a> &middot; Site design by <a href="http://leesemel.com">Lee Semel</a>
-            </h4>
-              <small><a href="{{ site.baseurl }}/terms/">Terms of Service</a></small>
-
-           </div>
+    <img class="mm-logo no-shadow" src="{{ site.baseurl }}/images/mandmthing-white.png" />
+    <div class="mm-credits">
+        <h4>
+            Engagement Photos by <a href="http://brooklynhilary.wordpress.com/">Hilary McHone</a> &middot; Site design by <a href="http://leesemel.com">Lee Semel</a>
+        </h4>
+        <small>
+            <a href="{{ site.baseurl }}/terms/">Terms of Service</a>
+        </small>
     </div>
-
-
-
-
+</div>
 </body>
 </html>

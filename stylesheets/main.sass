@@ -92,33 +92,58 @@ h4
     font-weight: bold
     text-transform: uppercase
 
-.mm-nav
-    margin-bottom: 50px
-    &.affix-top, &.affix, &.affix-bottom
-        position: inherit
+.mm-affixed
+    width: 100%
+    border: 0px
+    background: 0px
+
     @media (min-width: $screen-md-min)
         &.affix
+            z-index: $zindex-navbar-fixed
             position: fixed
-            top: 25px
+            +box-shadow(inset 0px 60px 60px rgba(255,255,255,0.9))
+            margin-bottom: 50px
+            width: 100%
+            height: 100px
+            padding-top: 10px
+            top: 0px
+            right: 0px
+            left: 0px
+img 
+    border-radius: 4px
+    +box-shadow(0px 1px 6px rgba(0,0,0,0.1))
+.no-shadow
+    +box-shadow(none)
+
+.mm-nav
+    text-align: center
+    float: none
+    padding: 0px
+    margin: 0px auto
+    z-index: 2000
+    ul 
+        display: inline-block
     li
         font-size: 22px
         font-family: $font-family-sans-serif
         font-weight: bold
         text-transform: uppercase
+        white-space: nowrap
+        list-style-type: none
+        display: inline-block
+        margin-left: 15px
+        margin-right: 15px
         span
             font-family: $font-family-cursive
             text-transform: lowercase
-        width: 25%
-        white-space: nowrap
-        margin-right: 20px
         a
             color: $gray-darker
             text-decoration: none
             &:hover, &:active
-                color: $yellow-light
+                color: $yellow
                 text-decoration: none
             &.active
-                color: $yellow-light
+                color: $yellow
 
 
 .mm-nav-directions
